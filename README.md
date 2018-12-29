@@ -1,8 +1,14 @@
-# ai-meeting-moderator
+# Project 魔镜
 
 [![BUPT CAD Project](https://img.shields.io/badge/👀-BUPT_CAD_Project-blue.svg)](https://github.com/bupt/awesome-cad)
 
 821 Meeting Moderator
+
+> Queen: Mirror, mirror, on the wall, who is the fairest of them all?
+> 
+> Mirror: ...
+>
+> - [Magic Mirror(Show White)](https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White))
 
 ## AUTHOR
 
