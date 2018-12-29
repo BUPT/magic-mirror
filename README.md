@@ -67,6 +67,7 @@ Currently we have 3 members: Professor SONG, PhD LI, and Master CHAI, we are HIR
 1. Integrate Text to Speech so that the Mirror can Talk:
     1. Integrate with TTS API
     1. Develop our own algrithms like WaveNet (optional)
+1. Integrate Mirror with Wechat: Mirror will be able to talk with you on Wechat!
 
 ### Year 2020
 
