@@ -6,7 +6,7 @@
 > [Escape Game Mirror Mirror on the Wall](http://gr.qadviser.eu/athens/escape-rooms/mirror-mirror-on-the-wall-the-mindtrap)
 
 > Queen: Mirror, mirror, on the wall, who is the fairest of them all?  
-> Mirror: ...  
+> Mirror: My Queen, you are the fairest in the land.  
 > - [Magic Mirror(Show White)](https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White))
 
 ## TEAM
