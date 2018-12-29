@@ -19,7 +19,16 @@
 - System Engineer: TBH
 - UI Designer: TBH
 
-Join us by contact @huan if you are interested!
+### We Are HIRING
+
+Requirements:
+
+1. Eager willing to learning Machine Learning.
+1. Strong sense of responsibility.
+1. Good team player.
+1. Ability to contribute at least 4 hour per week, which including 1 hour for team communition, 2 hour researching, and 1 hour for coding/docing.
+
+Join us by contact @huan (Wechat: 918999) if you are interested!
 
 ## ROAD MAP & MILESTONES
 
