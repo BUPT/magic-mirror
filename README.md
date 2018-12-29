@@ -7,13 +7,13 @@
 
 > Queen: Mirror, mirror, on the wall, who is the fairest of them all?  
 > Mirror: My Queen, you are the fairest in the land.  
-> - [Magic Mirror(Show White)](https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White))
+> -- [Magic Mirror(Show White)](https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White))
 
 ## TEAM
 
-- President: @HoneyCatty - Meina SONG
-- Vice President: @huan - Huan LI
-- System Administrator: @chaiwenjun000 - Wenjun CHAI
+- President: Meina SONG
+- Vice President: Huan LI
+- System Administrator: Wenjun CHAI
 - Dialog Engineer: TBH
 - Vision Engineer: TBH
 - System Engineer: TBH
@@ -29,8 +29,8 @@ This idea is created from @huan on Dec 2017, and write a [slide](https://docs.go
 
 ### Year 2018
 
-- Oct: The controller of the screen had been upgraded so that it can work without any additional hardward. (we have to use another computer to setup the screen after it turned on)
-- Nov: We added a HDMI switcher to manage multiple input signals.
+- Oct: The controller of the screen had been upgraded so that it can work without any additional hardward. (we don't need to use another computer to setup the screen after it turned on any more)
+- Nov: We added a HDMI switcher to manage multiple input signals so that we can do switch as easy as push a button.
 - Dec: We had setup Audio System for the Screen so that the HDMI audio can be played as well.
 
 ### Year 2019
@@ -73,6 +73,6 @@ Do something BIG!
 
 ## COPYRIGHT & LICENSE
 
-- Code & Docs © 2017-2018 Huan LI \<zixia@zixia.net\>
+- Code & Docs © 2017-2019 Huan LI \<zixia@zixia.net\>
 - Code released under the Apache-2.0 License
 - Docs released under Creative Commons
