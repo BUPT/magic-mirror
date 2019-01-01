@@ -68,7 +68,10 @@ Currently we have 3 members: Professor SONG, PhD LI, and Master CHAI, we are HIR
     1. Integrate with TTS API
     1. Develop our own algrithms like WaveNet (optional)
 1. Integrate Mirror with Wechat: Mirror will be able to talk with you on Wechat!
-
+1. Other Models
+    1. Body-Pix
+    1. Finger-Net
+    
 ### Year 2020
 
 Do something BIG!
