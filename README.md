@@ -14,6 +14,7 @@
 - President: Meina SONG
 - Vice President: Huan LI
 - System Administrator: Wenjun CHAI
+- Task System Manager: Shenda SHI
 - Dialog Engineer: TBH
 - Vision Engineer: TBH
 - System Engineer: TBH
