@@ -10,9 +10,9 @@
 
 - Task System Manager: Shenda SHI
 
-- Front-End: Jiawen HE
+- Front-End Engineer: Jiawen HE
 
-- Back-End: TBH
+- Back-End Engineer: TBH
 
     
 
@@ -25,11 +25,11 @@ Requirements:
 1. Good team player.
 1. Ability to contribute at least 4 hour per week, which including 1 hour for team communition, 2 hour researching, and 1 hour for coding/docing.
 
-Join us by contact**@Cy.Feng (E-mail: cy.z.feng@gmail.com)** if you are interested!
+Join us by contact **@Cy.Feng (E-mail: cy.z.feng@gmail.com)**  if you are interested!
 
 
 
-## ROAD MAP and Plan
+## Time Table
 
 We are setting up the team of the ‘CAD Task && Reward System’!
 
@@ -39,20 +39,20 @@ Professor SONG and  PhD LI are the supervisor of our team.
 
 #### Jan, 2019
 
-- Inherited initial idea from PhD Li.
-- Communicated with Professor SONG and enriched the idea. *Jan, 14*
-- Now We are hiring!  *Jan, 14*
+- [x] Inherited initial idea from PhD Li.
+- [x] Communicated with Professor SONG and enriched the idea. *Jan, 14*
+- [ ] Now We are hiring!  *Jan, 14*
 
 #### Feb, 2019
 
-- Complete internal idea about all co-relative system.
-- Have hired enough team players.
-- Get ready for coding work both front-end and back-end.
+- [ ] Complete internal idea about all co-relative system.
+- [ ] Have hired enough team players.
+- [ ] Get ready for coding work both front-end and back-end.
 
 #### Mar&Apr, 2019
 
-- Alpha version of  ‘CAD Task && Reward System’.
-- Accept the assessment.
+- [ ] Alpha version of  ‘CAD Task && Reward System’.
+- [ ] Accept the assessment.
 
 
 
