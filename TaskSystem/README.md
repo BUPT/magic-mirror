@@ -29,6 +29,12 @@ Join us by contact **@Cy.Feng (E-mail: cy.z.feng@gmail.com)**  if you are intere
 
 
 
+## Mind Mapping
+
+![](assets/CAD Task and Reward System-1547456763213.png)
+
+
+
 ## Time Table
 
 We are setting up the team of the ‘CAD Task && Reward System’!
