@@ -8,8 +8,6 @@
 
 - Person profile system
 
-![](assets/CAD Task and Reward System.png)
-
  
 
 ### Task System
