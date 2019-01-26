@@ -8,11 +8,11 @@
 
 ## TEAM
 
-- Task System Manager: Shenda SHI
+- Task System Manager: Shenda Shi.
 
-- Front-End Engineer: Jiawen HE
+- Front-End Engineer: Jiawen He, Zhongjie Chen, Jingru Liang.
 
-- Back-End Engineer: TBH
+- Back-End Engineer: Ruifeng Kuang, Mingyan Shao, Xiaoyang Kang.
 
     
 
@@ -33,21 +33,24 @@ Join us by contact **@Cy.Feng (E-mail: cy.z.feng@gmail.com)**  if you are intere
 
 We are setting up the team of the ‘CAD Task && Reward System’!
 
-Currently we have 2 members: Shenda SHI and Jiawen HE!
+Currently we have 7 members: 
 
-Professor SONG and  PhD LI are the supervisor of our team.
+​	*Shenda SHI, Jiawen He, Zhongjie Chen, Jingru Liang, Ruifeng Kuang, Mingyan Shao, Xiaoyang Kang.*
+
+Professor SONG and  PhD LI will be the supervisor of our team.
 
 #### Jan, 2019
 
 - [x] Inherited initial idea from PhD Li.
-- [x] Communicated with Professor SONG and enriched the idea. *Jan, 14*
-- [ ] Now We are hiring!  *Jan, 14*
+- [x] Communicated with Professor SONG and enriched the idea.  **Jan, 14**
+- [x] Basically complete recruitment!  **Jan, 23**
 
 #### Feb, 2019
 
 - [ ] Complete internal idea about all co-relative system.
-- [ ] Have hired enough team players.
+- [x] Have hired enough team players. **Jan, 23**
 - [ ] Get ready for coding work both front-end and back-end.
+- [ ] Invited Dr. Li to provide guidance to further clarify project needs.
 
 #### Mar&Apr, 2019
 
