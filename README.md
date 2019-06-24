@@ -5,6 +5,8 @@
 ![Magic Mirror](https://bupt.github.io/magic-mirror/images/mirror-mirror-on-the-wall.jpg)
 > [Escape Game Mirror Mirror on the Wall](http://gr.qadviser.eu/athens/escape-rooms/mirror-mirror-on-the-wall-the-mindtrap)
 
+----
+
 > Queen: Mirror, mirror, on the wall, who is the fairest of them all?  
 > Mirror: My Queen, you are the fairest in the land.  
 > -- [Magic Mirror(Show White)](https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White))
@@ -72,10 +74,14 @@ Currently we have 3 members: Professor SONG, PhD LI, and Master CHAI, we are HIR
 1. Other Models
     1. Body-Pix
     1. Finger-Net
-    
+
 ### Year 2020
 
 Do something BIG!
+
+## RESOURCES
+
+- [Homo - 一个高性能，易于扩展且完全开源的自然交互系统](https://homo.codist.me/)
 
 ## AUTHOR
 
