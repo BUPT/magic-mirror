@@ -82,6 +82,7 @@ Do something BIG!
 ## RESOURCES
 
 - [Homo - 一个高性能，易于扩展且完全开源的自然交互系统](https://homo.codist.me/)
+- [Carnegie Mellon University - 2015 Fall: The Databaseology Lecture Series > RocksDB](https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f4e0eb37-ae18-468f-9248-cb73edad3e56)
 
 ## AUTHOR
 
