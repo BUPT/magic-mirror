@@ -9,12 +9,13 @@
 
 > Queen: Mirror, mirror, on the wall, who is the fairest of them all?  
 > Mirror: My Queen, you are the fairest in the land.  
-> -- [Magic Mirror(Show White)](https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White))
+> -- [Magic Mirror(Snow White)](https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White))
 
 ## TEAM
 
 - President: Meina SONG
 - Vice President: Huan LI
+- Project Management: Xin HE
 - System Administrator: Wenjun CHAI
 - Task System Manager: Shenda SHI
 - Dialog Engineer: TBH
