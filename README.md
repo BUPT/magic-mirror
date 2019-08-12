@@ -13,15 +13,21 @@
 
 ## TEAM
 
-- President: Meina SONG
-- Vice President: Huan LI
-- Project Management: Xin HE
-- System Administrator: Wenjun CHAI
-- Task System Manager: Shenda SHI
-- Dialog Engineer: TBH
-- Vision Engineer: TBH
-- System Engineer: TBH
-- UI Designer: TBH
+| Role                 | Name       | Email | Bio |
+| -------------------- | ---------- | ----- | --- |
+| President            | Meina SONG | | |
+| Project Manager      | Xin HE     | <xin.a.he@gmail.com> | |
+| Chief Architect      | Huan LI    | <huan@bupt.edu.cn> | Magic Mirror Project Initializer |
+| Task System Manager  | Shenda SHI | <cy.z.feng@gmail.com> | |
+| System Administrator | Wenjun CHAI | | |
+| CV Engineer          | Bo LIN | <linbo0518@gmail.com> | |
+| Multi-Mode Engineer  | Zhengyuan ZHU | <zhuzhengyuan824@gmail.com> | |
+| Multi-Mode Engineer  | Guang CHEN | <petercg96@gmail.com> | |
+| CV Engineer          | Qing DONG | <dqbupt123@gmail.com> | |
+| Dialog Engineer      | Qinghua DUAN | <qhduan.com@gmail.com> | |
+| Vision Engineer      | Zhenggang HOU | | |
+| System Engineer      | TBH | | |
+| UI Designer          | TBH | | |
 
 ### We Are HIRING
 
