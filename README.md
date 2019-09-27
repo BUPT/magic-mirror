@@ -23,8 +23,8 @@
 | CV Engineer          | Bo LIN | <linbo0518@gmail.com> | |
 | CV Engineer          | Qing DONG | <dqbupt123@gmail.com> | |
 | CV Engineer          | Jiaming DUAN | <vincent.duan95@gmail.com> | |
-| Multi-Mode Engineer  | Zhengyuan ZHU | <zhuzhengyuan824@gmail.com> | |
-| Multi-Mode Engineer  | Guang CHEN | <petercg96@gmail.com> | |
+| Multi-Modal Engineer  | Zhengyuan ZHU | <zhuzhengyuan824@gmail.com> | |
+| Multi-Modal Engineer  | Guang CHEN | <petercg96@gmail.com> | |
 | Dialog Engineer      | Qinghua DUAN | <qhduan.com@gmail.com> | |
 | Vision Engineer      | Zhenggang HOU | | |
 | System Engineer      | TBH | | |
