@@ -8,6 +8,7 @@
 ## 0.安装依赖
 ```
 # 安装v4l2capture
+sudo apt-get install libv4l-dev
 git clone https://github.com/cgpeter96/python-v4l2capture.git
 cd python-v4l2capture
 python3 setup.py build
