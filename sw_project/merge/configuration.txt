@@ -1,0 +1,1 @@
+./human.mp4 500:500:390:220 60 100:100 ./speech.mp4 W-w:H-h ./audio.mp3 ./output.mp4 
