@@ -60,6 +60,7 @@ video.set_auto_white_balance(1)  # 设置白平衡
 size_x, size_y = video.set_format(
     args.width, args.height, fourcc='MJPG')  # 设置图像分辨率
 
+save_multilog=False #是否保存多个日志
 
 # dpath = "video{}-save-file".format(args.device_id)
 dpath = "video-save-file"
@@ -134,7 +135,7 @@ while True:
         if args.save_file:
             cv.imwrite(fname, frame)
             fp.write('{}:{}\n'.format(fname, time.time() - start))
-            if index % 100 == 0:
+            if save_multilog and index % 100 == 0:
                 fp.close()
                 fp_count += 1
                 fp = open('timelog/timestamp-{}.log'.format(fp_count), 'w')
