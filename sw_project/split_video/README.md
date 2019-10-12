@@ -1,6 +1,15 @@
-## ProcessVideo Using Manual
+# ProcessVideo Using Manual
+## Intro
+This script define a module which is used to split the video refer to a config file.
 
-### Example Code
+## Requirements
+1. ffmpeg
+ffmpeg are required in the system. (Not ffmpeg pip package)
+```bash
+sudo apt-get install ffmpeg
+```
+
+## Example Code
 ```python
 process_model = StreamProcessor(config_path='./cut.txt', input_path='./input', output_path='./output')
 # config_path means the config's path
@@ -8,8 +17,7 @@ process_model = StreamProcessor(config_path='./cut.txt', input_path='./input', o
 # output means where to ouput your files
 process_model.start()
 ```
-### Example Config File
-
+## Example Config File
 ```bash
 # format are following
 # | raw_stream name | output_name | split_start_time | split_end_time

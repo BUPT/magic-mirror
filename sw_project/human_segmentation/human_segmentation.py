@@ -1,6 +1,8 @@
+import os
 import sys
 import ast
 import argparse
+
 import cv2
 import numpy as np
 import torch
@@ -18,7 +20,7 @@ parser.add_argument('--threshold', type=float, default=0.2, help='人体在图�
 parser.add_argument('--model-params', type=str, required=True, help='加载的分割模型参数')
 parser.add_argument('--seg-model',
                     type=str,
-                    default='unet',
+                    default='resnet34',
                     help='选择分割模型，默认：unet')
 parser.add_argument('--backbone-model',
                     type=str,
@@ -43,9 +45,18 @@ def parse_input_file(input_file_path):
     image_path_list = list()
     timestamp_list = list()
 
-    with open(input_file_path, 'r') as f:
-        # TODO: need some sample of the input file
-        pass
+    if not os.path.exists(input_file_path):
+        raise ValueError("input_file_path dose not exist")
+
+
+    with open(os.path.join(input_file_path, "timelog/timestamp.log"), 'r') as f:
+        # TODO: Maybe add auto read all file under the dir are better, NEED
+        lines = f.readlines()
+        for line in lines:
+            img_name, timestamp = str(line.strip()).split(":")
+            image_path_list.append(os.path.join(input_file_path, img_name))
+            timestamp_list.append(timestamp)
+
     return image_path_list, timestamp_list
 
 
