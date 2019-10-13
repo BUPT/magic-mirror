@@ -35,9 +35,15 @@ parser.add_argument('--save-file', type=ast.literal_eval,
                     default=False, help='是否存图，默认否')
 parser.add_argument('--width', type=int, default=1920, help='图像宽度')
 parser.add_argument('--height', type=int, default=1080, help='图像高度')
+parser.add_argument('--multilog', type=str, default='false', help='时间日志文件是否存成多份')
+
 
 
 args = parser.parse_args()
+if args.multilog=='false':
+    args.multilog=False
+else:
+    args.multilog=True
 print(args)
 log_file = 'video{}-error.log'.format(args.device_id)
 if os.path.exists(log_file):
@@ -60,7 +66,6 @@ video.set_auto_white_balance(1)  # 设置白平衡
 size_x, size_y = video.set_format(
     args.width, args.height, fourcc='MJPG')  # 设置图像分辨率
 
-save_multilog=False #是否保存多个日志
 
 # dpath = "video{}-save-file".format(args.device_id)
 dpath = "video-save-file"
@@ -135,7 +140,7 @@ while True:
         if args.save_file:
             cv.imwrite(fname, frame)
             fp.write('{}:{}\n'.format(fname, time.time() - start))
-            if save_multilog and index % 100 == 0:
+            if args.multilog and index % 100 == 0:
                 fp.close()
                 fp_count += 1
                 fp = open('timelog/timestamp-{}.log'.format(fp_count), 'w')
