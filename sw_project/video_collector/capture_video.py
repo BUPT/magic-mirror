@@ -35,9 +35,15 @@ parser.add_argument('--save-file', type=ast.literal_eval,
                     default=False, help='是否存图，默认否')
 parser.add_argument('--width', type=int, default=1920, help='图像宽度')
 parser.add_argument('--height', type=int, default=1080, help='图像高度')
+parser.add_argument('--multilog', type=str, default='false', help='时间日志文件是否存成多份')
+
 
 
 args = parser.parse_args()
+if args.multilog=='false':
+    args.multilog=False
+else:
+    args.multilog=True
 print(args)
 log_file = 'video{}-error.log'.format(args.device_id)
 if os.path.exists(log_file):
@@ -134,7 +140,7 @@ while True:
         if args.save_file:
             cv.imwrite(fname, frame)
             fp.write('{}:{}\n'.format(fname, time.time() - start))
-            if index % 100 == 0:
+            if args.multilog and index % 100 == 0:
                 fp.close()
                 fp_count += 1
                 fp = open('timelog/timestamp-{}.log'.format(fp_count), 'w')
