@@ -6,7 +6,7 @@ Github: https://github.com/Duan-JM
 Description:
     Define the Actions, such as send emails, split video/audio, merge video/audio
 """
-class base_action:
+class BaseAction:
     """
     base action module for futuer
     """
@@ -22,3 +22,20 @@ class base_action:
         """
         raise NotImplementedError
 
+
+class SplitVideoAction(BaseAction):
+    NotImplementedError
+
+class SplitAudioAction(BaseAction):
+    NotImplementedError
+
+class MergeMediaAction(BaseAction):
+    NotImplementedError
+    def __init__(self, **kwargs):
+        """
+        kwargs define the path of the materials
+        """
+        pass
+
+    def get_inputs(self, input_data)
+        

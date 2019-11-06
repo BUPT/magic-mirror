@@ -26,3 +26,16 @@ class BasicProcess:
         return: flag(boolen): check if action have done properly
         """
         raise NotImplementedError
+
+class BaseDetectronProcess(BasicProcess):
+    """
+    Using Detectron2 to detect some object
+    """
+    NotImplementedError
+
+
+class PeopleExistTimeProcess(BaseDetectronProcess):
+    """
+    Use output of the detectron2, to accomplish some function
+    """
+    NotImplementedError
