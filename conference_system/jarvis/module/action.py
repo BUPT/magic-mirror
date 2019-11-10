@@ -13,17 +13,40 @@ class BaseAction:
     """
     base action module for futuer
     """
-    def get_inputs(self, input_data):
-        """
-        Check if input_data match the requirements, if True receive the input
-        """
-        raise NotImplementedError
-
     def process(self):
         """
         Use `self.input_data` to do some actions
         """
         raise NotImplementedError
+
+
+class PicToVideo(BaseAction):
+    """
+    combine picture batches to video
+    """
+    def __init__(self, pic_batch_path):
+        """
+        params: pic_batch_path(string): where is the pictures
+
+        return: mp4 video
+        """
+        self.pic_batch_path = pic_batch_path
+
+    def process(self, fps, target_file):
+        # sort pic by name, from 0 to n
+        imgs = sorted([path for path in os.listdir(self.pic_batch_path)],
+                      key=lambda x: int(x.split('.')[0]))
+
+        new_imgs = [os.path.join(self.pic_batch_path, '{}.jpg'.format(i))
+                    for i in range(len(imgs))]
+
+        for old, new in zip(imgs, new_imgs):
+            os.rename(os.path.join(self.pic_batch_path, old), new)
+
+        print('>>>>>>>开始合并...')
+        command = "ffmpeg -start_number 0 -i '{}/%d.jpg' -r {} -vcodec mpeg4 -b:v 4000k  {}".format(self.pic_batch_path, fps, target_file)
+        subprocess.call(command, shell=True)
+        print('<<<<<<<合并结束')
 
 
 class SplitAction(BaseAction):
@@ -94,12 +117,14 @@ class SplitAction(BaseAction):
 
 
 class MergeMediaAction(BaseAction):
+    #  TODO: Plz refine the params#
     """
+    author_mail: ximingxing@gmail.com
+
     to use:
     m = MergeMediaAction(video_path1="./human.mp4",video_path2="./speech.mp4",audio_path="./audio.mp3", output_path="./output.mp4")
-    m.merge()
+    m.process() following is the use of param.
 
-    following is the use of param.
     :param video_path1: human video's path
     :param cut_position: human video's cut position, the format is (width,height,x1,y1)
     :param cut_time_during: how long should the human video be cutted
@@ -108,14 +133,13 @@ class MergeMediaAction(BaseAction):
     :param merge_position: two video's merge position, position that we need to overlay (x1,y1)
     :param audio_name: audio name
     :param output_path: the final audio's output path
-    :param use_configuration_file: whether to use configuration file
+    :param use_configuration_file: whether to use configuration file 
     """
     def __init__(self,
-            video_path1="./human.mp4", cut_position="500:500:390:220", cut_time_during=60, scale_size="100:100",
-            video_path2="./speech.mp4", merge_position="W-w:H-h",
-            audio_path="./audio.mp3",
-            output_path="./output.mp4",
-            use_configuration_file=False):
+                 video_path1="./human.mp4", cut_position="500:500:390:220", cut_time_during=60,
+                 scale_size="100:100", video_path2="./speech.mp4", merge_position="W-w:H-h",
+                 audio_path="./audio.mp3", output_path="./output.mp4",
+                 use_configuration_file=False):
         self.video_path1 = video_path1,
         self.cut_position = cut_position,
         self.cut_time_during = cut_time_during,
@@ -148,7 +172,7 @@ class MergeMediaAction(BaseAction):
                 .format(self.audio_path, self.output_path)
         return add_audio
 
-    def merge(self):
+    def process(self):
         # run all the command
         print("Start cut.")
         os.system(self._cut_human)
