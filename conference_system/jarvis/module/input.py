@@ -48,7 +48,6 @@ class BaseInput:
         check if the device is available, if true,
         set the device to the self.device
         """
-        raise NotImplementedError
 
     def raw_output(self, save_path):
         """
@@ -67,7 +66,7 @@ class VideoRecord(BaseInput):
         """
         params: exposure_type (int) : 3 auto, 1 manual
         params: exposure_absolute (int): manually set exposure
-        params: window_size (tuple): (size_x, size_y)
+        params: window_size (tuple): (width, height)
         """
         super(VideoRecord, self).__init__()
         self.device = data_source_device
@@ -86,8 +85,9 @@ class VideoRecord(BaseInput):
         return: flag(boolen): check if device exist
         """
         if os.path.exists(self.device):
-            video = v4l2capture.Video_device(self.device)
-            video.set_format(self.window_size(0), self.window_size(1), fourc='MJPG')
+            video = cv.VideoCapture(self.device)
+            video.set(3, self.window_size(0))
+            video.set(4, self.window_size(1))
         else:
             raise ValueError(f"{self.device} you choose is not exists")
         return video
@@ -123,10 +123,9 @@ class VideoRecord(BaseInput):
         error_count = 0
         while True:
             try:
-                select.select((video,), (), ())
-                image_data = video.read_and_queue()
-                frame = cv.imdecode(np.frombuffer(image_data, dtype=np.uint8), cv.IMREAD_COLOR)
+                ret, frame = video.read()
                 fname = f"video-save-file/{str(index)}.jpg"
+                shape = frame.shape
                 index += 1
                 cur_index += 1
 
@@ -185,29 +184,25 @@ class VideoRecord(BaseInput):
 class AudioRecord(BaseInput):
     """
     Record Video from the hardware.
+
+    Need have audio-recorder
+    >>> sudo apt-get install audio-recorder
     """
-    def __init__(self):
+    def __init__(self, card_num, device_num):
+        """
+        params: card_num(int): choose the number of the card for the audio
+        params: device(int): choose the number of the device for the audio
+        """
         super(AudioRecord, self).__init__()
         self.device = None
-
-    def set_device(self, data_source_device):
-        """
-        Set the audio source input device
-
-        params: data_source_device(string)
-
-        return: flag(boolen): check if device exist
-        """
-        if os.path.exists(data_source_device):
-            self.device = data_source_device
-        else:
-            raise ValueError(f"{data_source_device} you choose is not exists")
+        self.card_num = card_num
+        self.device_num = device_num
 
     def device_avalible(self):
         """
         Output all audio availabe in current system
         """
-        # print(os.popen('ls /dev/video*').read())
+        os.system("arecord -l")
 
     def raw_output(self, save_path):
         """
@@ -215,5 +210,5 @@ class AudioRecord(BaseInput):
 
         params: save_path(string): choose which type to output
         """
-        # if path exist -> output to save_path
-        # elif raise error, later may change to live strea
+        print("Start logging, ctrl-c to stop")
+        os.system(f"arecord -Dhw:{self.card_num},{self.device_num} -c 2 -r 44100 -f S16_LE {save_path}")
