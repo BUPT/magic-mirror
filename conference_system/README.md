@@ -28,12 +28,15 @@
 </h6>
 
 <h6 align="center">Available Service List</h6>
+
 -  Lecture Video Generator (WIP)
     * 自动生成演讲者演讲视频
     * Relavent Service Link [here](link).
+
 -  Take a selfie
     * 大声喊 "Cheeeeers" 就能自动使用会议室摄像头进行合影
     * Relavent Service Link [here](link).
+
 -  Who are they
     * 只需要给系统发信息，便可自动生成当前会议室内的参会人员信息
     * Relavent Service Link [here](link).
@@ -51,6 +54,7 @@ Open Source runs on love, laughter and a whole lot of coffee. Consider buying me
 
 - 安装opencv
   * pip3 install opencv-python
+
 - 安装ffmpeg
 
   * 需要添加ffmpeg到“环境变量”，ffmpeg下载地址可以[点击这里](https://ffmpeg.zeranoe.com/builds/)。（下载static包解压即可）
