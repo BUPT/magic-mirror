@@ -64,6 +64,7 @@ Open Source runs on love, laughter and a whole lot of coffee. Consider buying me
 
 - Directory 
 
+```bash
 └── jarvis
     ├── README.md
     ├── module
@@ -106,6 +107,7 @@ Open Source runs on love, laughter and a whole lot of coffee. Consider buying me
     │   └── utils.py
     └── service
         └── lecture_generate_service.py
+```
 
 
 <h2 align="center">About</h2>
