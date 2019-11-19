@@ -84,36 +84,6 @@ class PeopleExistTimeProcess(BasicProcess):
         return timestamp_list: list, list of timestamp
         '''
         image_path_list = list()
-        timestamp_list = list()
-
-        if not os.path.exists(self.input_path):
-            raise ValueError("input_file_path dose not exist")
-
-        with open(os.path.join(self.input_path, "timelog/timestamp.log"), 'r') as f:
-            # TODO: Maybe add auto read all file under the dir are better, NEED
-            lines = f.readlines()
-            for line in lines:
-                img_name, timestamp = str(line.strip()).split(":")
-                image_path_list.append(os.path.join(self.input_path, img_name))
-                timestamp_list.append(timestamp)
-
-        return image_path_list, timestamp_list
-
-
-    def _find_person(self, predictions, thing_classes):
-        """
-        Find if person are in the image
-        """
-        for pred_class in predictions['instances'].pred_classes:
-            if thing_classes[pred_class] == 'person':
-                # TODO can add ratio of person in the whole image
-                return True
-        return False
-
-
-    def take_action(self):
-        # ====> init base config
-        mp.set_start_method("spawn", force=True)
         cfg = self._setup_cfg()
         detectron = VisualizationDetectron(cfg)
 
