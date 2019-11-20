@@ -5,19 +5,27 @@
 Input Module is used to receive data from hardware or somewhere else, the ouput of the module will be used in Process Module
 
 * BaseInput
+
   BaseClass for all module in InputModule
+
 * VideoRecord
+
   Record Video from the hardware.
+
 * AudioRecord
+
   Record Video from the hardware.
 
 ## process.py
 
 * BasicProcess
+
   BaseClass for all module in ProcessModule
 
 * PeopleExistTimeProcess
+
   Using Detectron2 to detect people
+
   ```python
   >>> process = PeopleExistTimeProcess(
                 detectron_config_path='./configs/detectron2/COCO-InstanceSegmentation/mask_rcnn_R_50_C4_1x.yaml',
@@ -26,6 +34,7 @@ Input Module is used to receive data from hardware or somewhere else, the ouput 
   ```
 
 * VisualizationDetectron
+
   ```python
   Args:
       cfg (CfgNode):
@@ -40,24 +49,31 @@ Define the Actions, such as send emails, split video/audio, merge video/audio
 
 * BaseAction
 * PicToVideo
+
   combine picture batches to video
+
 * SplitAction 
+
   Direct use ffmpeg command to sperate the video. The corresponding timestamp
+
   ```bash
   >>> process = SplitAction('./config', './input', './output')
   >>> process.start()
   ```
 
   Example config_file:
+
   ```bash
   system.mp4 | test.mp4 | 00:00:00 | 00:00:01
   system.mp3 | test.mp3 | 00:00:00 | 00:00:01
   ```
+
 * MergeAction
+
   ```python
   m = MergeMediaAction(video_path1="./human.mp4",video_path2="./speech.mp4",audio_path="./audio.mp3", output_path="./output.mp4")
   m.process() following is the use of param.
-  ```
+
   :param video_path1: human video's path
   :param cut_position: human video's cut position, the format is (width,height,x1,y1)
   :param cut_time_during: how long should the human video be cutted
@@ -67,6 +83,7 @@ Define the Actions, such as send emails, split video/audio, merge video/audio
   :param audio_name: audio name
   :param output_path: the final audio's output path
   :param use_configuration_file: whether to use configuration file 
+  ```
 
 ## utils.py
 

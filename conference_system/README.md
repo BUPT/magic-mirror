@@ -45,14 +45,17 @@
 
 - 安装audio-recorder
   * sudo apt-get install audio-recorder
+
 - 安装v4l2capture for input mudule
   * sudo apt-get install libv4l-dev
   * git clone https://github.com/cgpeter96/python-v4l2capture.git
   * cd python-v4l2capture
   * python3 setup.py build
   * sudo python3 setup.py install
+
 - 安装opencv
   * pip3 install opencv-python
+
 - 安装ffmpeg
   * 需要添加ffmpeg到“环境变量”，ffmpeg下载地址可以[点击这里](https://ffmpeg.zeranoe.com/builds/)。（下载static包解压即可）
 
