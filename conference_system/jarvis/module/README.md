@@ -1,6 +1,6 @@
 ## Module Intrduction
 
-## input.py
+### input.py
 
 Input Module is used to receive data from hardware or somewhere else, the ouput of the module will be used in Process Module
 
@@ -16,7 +16,7 @@ Input Module is used to receive data from hardware or somewhere else, the ouput 
 
   Record Video from the hardware.
 
-## process.py
+### process.py
 
 * BasicProcess
 
@@ -43,7 +43,7 @@ Input Module is used to receive data from hardware or somewhere else, the ouput 
       Useful since the visualization logic can be slow.
   ```
 
-## action.py
+### action.py
 
 Define the Actions, such as send emails, split video/audio, merge video/audio
 
@@ -85,9 +85,9 @@ Define the Actions, such as send emails, split video/audio, merge video/audio
   :param use_configuration_file: whether to use configuration file 
   ```
 
-## utils.py
+### utils.py
 
-## configs/
+### configs/
 ```bash
 .
 └── detectron2
@@ -107,7 +107,7 @@ Define the Actions, such as send emails, split video/audio, merge video/audio
     └── quick_schedules
 ```
 
-## legacy/
+### legacy/
 
 ```bash
 .
