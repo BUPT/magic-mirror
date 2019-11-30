@@ -47,7 +47,6 @@ Input Module is used to receive data from hardware or somewhere else, the ouput 
 
 Define the Actions, such as send emails, split video/audio, merge video/audio
 
-* BaseAction
 * PicToVideo
 
   combine picture batches to video
@@ -85,9 +84,9 @@ Define the Actions, such as send emails, split video/audio, merge video/audio
   :param use_configuration_file: whether to use configuration file 
   ```
 
-### utils.py
-
 ### configs/
+configs is used to configure the pagkages like `detectron2`, if we don't use 
+detectron2, feel free to delete the folder `detectron2`.
 ```bash
 .
 └── detectron2
@@ -108,6 +107,8 @@ Define the Actions, such as send emails, split video/audio, merge video/audio
 ```
 
 ### legacy/
+Legacy contains the old useful scripts from past times. Basically, these
+scripts is good to go for now. Both of them have individual docs.
 
 ```bash
 .
