@@ -1,0 +1,22 @@
+sudo: false
+
+language: python
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"      # current default Python on Travis CI
+  - "3.7"
+  - "3.8"
+  - "3.8-dev"  # 3.8 development branch
+  - "nightly"  # nightly build
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt # we don't have requirements for now
+  - pip install flake8 flake8-mypy flake8-bugbear flake8-comprehensions flake8-executable flake8-pyi mccabe pycodestyle pyflakes
+  # install flake8
+
+# command to run tests
+script:
+  - flake8 --max-line-length=120 --select B,C,E,F,P,T4,W,B9 --per-file-ignores __init__.py:F401 --ignore E203,E305,E402,E401,E721,E741,F403,F405,F821,F841,F999,W503,W504,C408,E302,W291,E303,B007,B008,C400,C401,C402,C403,C404,C405,C407,C411 ./conference_system
+    # code check for ./conference_system
