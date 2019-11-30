@@ -27,7 +27,7 @@
 <a href="https://ximingxing.github.io/">https://ximingxing.github.io/</a>
 </h6>
 
-<h6 align="center">Available Service List</h6>
+<h2 align="center">Available Service List</h2>
 
 -  Lecture Video Generator (WIP)
     * 自动生成演讲者演讲视频
@@ -123,23 +123,23 @@ We want to thanks :
 
 - [ffmpeg](https://www.ffmpeg.org/download.html)
 
-  A complete, cross-platform solution to record, convert and stream audio and video.
+  * A complete, cross-platform solution to record, convert and stream audio and video.
 
-  ffmpeg version 3.4.6-0ubuntu0.18.04.1 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 7 (Ubuntu 7.3.0-16ubuntu3)
+  * ffmpeg version 3.4.6-0ubuntu0.18.04.1 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 7 (Ubuntu 7.3.0-16ubuntu3)
 
 - [opencv-python](https://pypi.org/project/opencv-python/)
 
-  openCV is used for all sorts of image and video analysis, like facial recognition and detection, license plate reading, photo editing, advanced robotic vision, optical character recognition, and a whole lot more.
+  * openCV is used for all sorts of image and video analysis, like facial recognition and detection, license plate reading, photo editing, advanced robotic vision, optical character recognition, and a whole lot more.
 
-  opencv-python version : 4.1.1.26
+  * opencv-python version : 4.1.1.26
 
 -  [libv41-dev](https://github.com/cgpeter96/python-v4l2capture.git)
 
-  libv4l is a collection of libraries which adds a thin abstraction layer on top of video4linux2 devices.
+  * libv4l is a collection of libraries which adds a thin abstraction layer on top of video4linux2 devices.
 
 - [Detectron2](https://github.com/facebookresearch/detectron2)
 
-  Detectron2 is Facebook AI Research's next generation software system that implements state-of-the-art object detection algorithms.
+  * Detectron2 is Facebook AI Research's next generation software system that implements state-of-the-art object detection algorithms.
 
 <h2 align="center">:speech_balloon: FAQ</h2>
 <p align="right"><a href="#conference"><sup>▴ Back to top</sup></a></p>
