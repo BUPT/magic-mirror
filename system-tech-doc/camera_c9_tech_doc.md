@@ -3,13 +3,16 @@
 
 ## 硬件介绍：
 清流迅公司使用的云台摄像头实际硬件提供厂家为紫荆云视公司的终端C9。
+
 [硬件的基本参数和指标点这里](https://www.zijingcloud.com/product-terminal.html)
 
 ## 安装硬件注意事项：
 1. C9需要连网，与清流迅的云端server直通，因此在网络环境下需要能够ping通如下两个地址
 
-`ping  v.streamocean.com`
-`ping  sonc.streamocean.com`
+```code
+ping  v.streamocean.com
+ping  sonc.streamocean.com
+```
 
 2. 为提升视频流速度，本地环境需要安装服务软件 dLR，具体安装步骤下文详述
 3. dLR和C9都会与清流迅的云端服务器通讯，通讯数据流量数据信令控制，几个kbs。通信是通过UDP包，因此在首次通信时有时会比较耗时或者响应较慢。
@@ -17,51 +20,68 @@
 
 ### C9所需的本地服务端 dLR 安装步骤
 1. 安装文件在目录dlr_install目录
-`
+```code
 -rw-r--r--   1 robinhe  staff  1175 Sep  2 15:57 README
 drwxr-xr-x  10 robinhe  staff   320 Sep 12 11:14 dLR
 drwxr-xr-x  10 robinhe  staff   320 Sep 12 11:21 install
-`
+```
 2. 通过ifconfig命令查看网卡名称，目前的gpu工作站网卡名称为enp2s0
 3. 修改 dLR文件夹中的lrc_config.py文件， vi lrc_config.py
 
-`
+```code
 NIC = "enp2s0"
 lr_name = 'dlr_bupt'
 vsp_name = 'buptvsp'
-`
+```
+
 4. 进入install文件夹，执行命令：（无需root，ubuntu16.04和18.04均可以）
 
 
-`./install.sh`
+```code
+./install.sh
+```
 
 5. 关闭ubuntu自带的防火墙，请自行评估风险
 
-`sudo ufw disable`
+```code
+sudo ufw disable
+```
 
 6. 配置服务
 
-`/usr/local/bin/supervisord -c /etc/supervisord.conf`
+```code
+/usr/local/bin/supervisord -c /etc/supervisord.conf
+```
 
 7. 启动服务（192.168.8.183为GPU工作站自己的IP）
 
-`python2.7 dlr.pyc 192.168.8.183 9001`
+```code
+python2.7 dlr.pyc 192.168.8.183 9001
+```
 
 8. 查看进程情况
 
-`ps -ef| grep 9001`
+```code
+ps -ef| grep 9001
+```
 
 9. 查看服务实时日志
 
-`tail -f lr.log  `
+```code
+tail -f lr.log  `
+```
 
 10. 查看网络udp状态
 
-`netstat -uanp`
+```code
+netstat -uanp`
+```
 
 11. （可选）也可以直接在dLR文件夹目录中执行命令启动：
 
-`nohup python2.7 dlr.pyc 9001 & `
+```code
+nohup python2.7 dlr.pyc 9001 & `
+```
 
 ### 固件升级说明（刷机）
 #### 登录到C9后台，清除旧的固件版本（其实本步骤可以省略）
@@ -69,9 +89,11 @@ vsp_name = 'buptvsp'
 
 密码：admin
 
-1. 执行 `rm -rf /data/data/com.streamocean.ihi_desktop`
-2. 执行 `rm -rf /data/dalvik-cache/data\@app\@com.streamocean.ihi_desktop-2.apk\@classes.dex`
-3. 执行 `rm -rf /data/app/com.streamocean.ihi_desktop-2.apk`
+```code
+rm -rf /data/data/com.streamocean.ihi_desktop
+rm -rf /data/dalvik-cache/data\@app\@com.streamocean.ihi_desktop-2.apk\@classes.dex
+rm -rf /data/app/com.streamocean.ihi_desktop-2.apk
+```
 
 #### 将wipe1.rar解压
 1. 将U盘格式化为 FAT32 格式（如果不是这个格式，则不能升级）
@@ -87,9 +109,13 @@ vsp_name = 'buptvsp'
 5、升级完成之后，看到二维码的界面，再将U盘拔下来。
 6、用手机扫描二维码进行账号绑定和会议的操作。
 
-### [接口文档](http://showapi.streamocean.com/index.php?s=/37&page_id=609)
+### API调用接口
 
-### [微信端遥控说明]()
+[接口文档](http://showapi.streamocean.com/index.php?s=/37&page_id=609)
+
+### 微信控制界面说明
+
+[微信端遥控说明-待补充]()
 
 ## 当前正在由清流迅解决的问题：（2019-12-17）
 1. 需要开机直接进入影像（去除或跳过二维码环节）
